@@ -5,33 +5,42 @@ const describe = (desc, fn) => {
   
 const it = (msg, fn) => describe('  ' + msg, fn)
 
-const matchers = (exp) => ({
-  toBe: (asssertion) => {
-    if (exp === assertion) {
-    console.log('pass')
-    return true
+const matchers = (actualValue) => ({
+  toBe: (expectedValue) => {
+    if (actualValue === expectedValue) {
+      console.log("actual value: " + actualValue)
+      console.log("expectedValue: " + expectedValue)
+      console.log('pass')
+      return true
     } else {
-    console.log('fail')
-    return false
+      console.log("actual value: " + actualValue)
+      console.log("expectedValue: " + expectedValue)
+      console.log('fail')
+      return false
     }
   }
 })
 
-const expect = (exp) => matchers(exp)
+const expect = (actualValue) => matchers(actualValue)
 
 function adder(a, b) {
     return a + b 
     }
-const assertion = {
-  isTrue: function(assertion) {
-    if (!assertion) {
-        throw new Error("Assertion failed" + assertion + "is not truthy");
+
+
+const expectedValue = {
+  isTrue: function() {
+    if (!expectedValue) {
+        throw new Error("Test failed" + expectedValue + "is not truthy");
+    } else {
+      return expectedValue
     }
   },
-  isFalse: function (assertion) {
-    if (assertion) {
-        throw new Error("Assertion failed" + assertion + "is not truthy");
-    }    
+  isFalse: function (expectedValue) {
+    if (expectedValue) {
+        throw new Error("Test failed" + expectedValue + "is not truthy");
+    } else {
+    } 
   },
 };
   

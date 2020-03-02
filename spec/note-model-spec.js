@@ -22,6 +22,8 @@
 describe('Note', () => {
   it('print hello', () => {
     const note = new Note();
-    expect(note.text()).toBe('Hello')
+    expect(note.text()).toBe("Hello")
   })
 })
+
+
