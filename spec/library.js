@@ -31,6 +31,17 @@ const matchers = (actualValue) => ({
       console.log('fail')
       return false
     }
+  },
+  isFalse: () => {
+    if (actualValue === false) {
+      console.log("actualValue: " + actualValue)
+      console.log('pass')
+      return true
+    } else {
+      console.log("actualValue: " + actualValue)
+      console.log('fail')
+      return false
+    }
   }
 })
 
