@@ -8,12 +8,12 @@ const it = (msg, fn) => describe('  ' + msg, fn)
 const matchers = (actualValue) => ({
   toBe: (expectedValue) => {
     if (actualValue === expectedValue) {
-      console.log("actual value: " + actualValue)
+      console.log("actualValue: " + actualValue)
       console.log("expectedValue: " + expectedValue)
       console.log('pass')
       return true
     } else {
-      console.log("actual value: " + actualValue)
+      console.log("actualValue: " + actualValue)
       console.log("expectedValue: " + expectedValue)
       console.log('fail')
       return false
