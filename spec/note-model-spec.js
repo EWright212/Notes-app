@@ -28,17 +28,9 @@ describe('Note', () => {
     const note = new Note();
     expect(note.trueTest()).isTrue()
   })
-  it('tests if is true fails', () => {
-    const note = new Note();
-    expect(note.falseTest()).isTrue()
-  })
   it('tests if is false works', () => {
     const note = new Note();
     expect(note.falseTest()).isFalse()
-  })
-  it('tests if is false fails', () => {
-    const note = new Note();
-    expect(note.trueTest()).isFalse()
   })
 })
 

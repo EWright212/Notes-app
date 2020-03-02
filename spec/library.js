@@ -7,7 +7,7 @@ const describe = (desc, fn) => {
   
 const it = (msg, fn) => describe('  ' + msg, fn)
 
-const matchers = (actualValue) => ({
+const expect = (actualValue) => ({
   toBe: (expectedValue) => {
     if (actualValue === expectedValue) {
       console.log("actualValue: " + actualValue)
@@ -44,14 +44,4 @@ const matchers = (actualValue) => ({
     }
   }
 })
-
-const expect = (actualValue) => matchers(actualValue)  
-
-//   example syntax
-//   describe('adder', () => {
-//     it('adds two numbers', () => {
-//       const result = adder(1, 2)
-//       expect(result).toBe(3)
-//     })
-//   })
-  
+ 
