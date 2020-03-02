@@ -24,6 +24,14 @@ describe('Note', () => {
     const note = new Note();
     expect(note.text()).toBe("Hello")
   })
+  it('tests if is true works', () => {
+    const note = new Note();
+    expect(note.trueTest()).isTrue()
+  })
+  it('tests if is true fails', () => {
+    const note = new Note();
+    expect(note.falseTest()).isTrue()
+  })
 })
 
 

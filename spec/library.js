@@ -1,6 +1,8 @@
 const describe = (desc, fn) => {
+    console.log("Test: ")
     console.log(desc)
     fn()
+    console.log("")
 }
   
 const it = (msg, fn) => describe('  ' + msg, fn)
@@ -18,32 +20,21 @@ const matchers = (actualValue) => ({
       console.log('fail')
       return false
     }
+  },
+  isTrue: () => {
+    if (actualValue === true) {
+      console.log("actualValue: " + actualValue)
+      console.log('pass')
+      return true
+    } else {
+      console.log("actualValue: " + actualValue)
+      console.log('fail')
+      return false
+    }
   }
 })
 
-const expect = (actualValue) => matchers(actualValue)
-
-function adder(a, b) {
-    return a + b 
-    }
-
-
-const expectedValue = {
-  isTrue: function() {
-    if (!expectedValue) {
-        throw new Error("Test failed" + expectedValue + "is not truthy");
-    } else {
-      return expectedValue
-    }
-  },
-  isFalse: function (expectedValue) {
-    if (expectedValue) {
-        throw new Error("Test failed" + expectedValue + "is not truthy");
-    } else {
-    } 
-  },
-};
-  
+const expect = (actualValue) => matchers(actualValue)  
 
 //   example syntax
 //   describe('adder', () => {
