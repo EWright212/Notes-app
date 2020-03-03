@@ -10,4 +10,9 @@ describe('Note list', () => {
     noteList.addNote("note 2")
     expect(noteList.getNotes()).toBe("note 1,note 2")
   })
+  it('can create a note and then also insert it', () => {
+    var noteList = new NoteList();
+    noteList.addAndCreateNote("Favourite drink: Water")
+    expect(noteList.list[0].getText()).toBe("Favourite drink: Water")
+  })
 })

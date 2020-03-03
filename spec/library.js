@@ -16,9 +16,7 @@ const expect = (actualValue) => ({
       return true
     } else {
       console.log("actualValue: " + actualValue)
-      console.log(Array.isArray(actualValue))
-      console.log("expectedValue: " + expectedValue)
-      console.log(Array.isArray(expectedValue))
+      console.log("expectedValue: " + expectedValue)   
       console.log('fail')
       return false
     }
