@@ -1,9 +1,9 @@
 var NoteList = function() {
-  this.list = ["note 1"];
+  this.list = [];
 }
 
 NoteList.prototype.getNotes = function() {
-  return this.list[0]
+  return this.list.join()
 }
 
 NoteList.prototype.addNote = function(newNote) {
