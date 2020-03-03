@@ -1,5 +1,7 @@
 var NoteListView = function() {}
 
 NoteListView.prototype.getView = function(listOfNotes) {
-  return ('<ul><li><div>' + listOfNotes.getNotes() +'</div></li></ul>')
+  var listContent = listOfNotes.list.map(e => e.getText())
+  listContent = listContent.map(e => '<li><div>'+ e + '</div></li>')
+  return "<ul>" + listContent.join("") + "</ul>"
 }
