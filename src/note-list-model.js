@@ -3,7 +3,8 @@ var NoteList = function() {
 }
 
 NoteList.prototype.getNotes = function() {
-  return this.list.join()
+  noteContents = this.list.map(e => e.text)
+  return noteContents.join()
 }
 
 NoteList.prototype.addNote = function(Note) {
