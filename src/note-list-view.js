@@ -1,5 +1,5 @@
 var NoteListView = function() {}
 
-NoteListView.prototype.views = function () {
-  return '<ul><li><div>Favourite snack: Dried mango</div></li></ul>'
+NoteListView.prototype.getView = function(listOfNotes) {
+  return ('<ul><li><div>' + listOfNotes.getNotes() +'</div></li></ul>')
 }
