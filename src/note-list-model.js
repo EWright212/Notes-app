@@ -1,5 +1,5 @@
-var NoteList = function() {
-  this.list = ["note 1"];
+var NoteList = function(newNote) {
+  this.list = [newNote];
 }
 
 NoteList.prototype.getNotes = function() {
