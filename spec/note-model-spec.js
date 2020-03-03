@@ -21,17 +21,17 @@
 
 describe('Note', () => {
   it('print hello', () => {
-    const note = new Note();
-    expect(note.text()).toBe("Hello")
+    const note = new Note("Hello");
+    expect(note.getText()).toBe("Hello")
   })
-  it('tests if is true works', () => {
-    const note = new Note();
-    expect(note.trueTest()).isTrue()
-  })
-  it('tests if is false works', () => {
-    const note = new Note();
-    expect(note.falseTest()).isFalse()
-  })
+  // it('tests if is true works', () => {
+  //   const note = new Note();
+  //   expect(note.trueTest()).isTrue()
+  // })
+  // it('tests if is false works', () => {
+  //   const note = new Note();
+  //   expect(note.falseTest()).isFalse()
+  // })
 })
 
 
