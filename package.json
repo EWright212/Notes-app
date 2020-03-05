@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/EWright212/Notes-app/issues"
   },
-  "homepage": "https://github.com/EWright212/Notes-app#readme"
+  "homepage": "https://github.com/EWright212/Notes-app#readme",
+  "dependencies": {
+    "http-server": "^0.12.1"
+  }
 }
